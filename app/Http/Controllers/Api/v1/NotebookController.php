@@ -52,10 +52,25 @@ class NotebookController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(NotebookRequest $request, $id)
+    public function update(Request $request, $id)
     {
         $topic = Notebook::findOrFail($id);
-        $topic->update($request->validated());
+        $updateTopic = $request->toArray();
+
+        if (!isset($request->fio))
+        {
+            $updateTopic["fio"] = $topic->fio;
+        }
+        if (!isset($request->phone))
+        {
+            $updateTopic["phone"] = $topic->phone;
+        }
+        if (!isset($request->email))
+        {
+            $updateTopic["email"] = $topic->email;
+        }
+
+        $topic->update($updateTopic);
         return $topic;
     }
 
