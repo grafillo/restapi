@@ -84,6 +84,6 @@ class NotebookController extends Controller
     {
         $topic = Notebook::findOrFail($id);
         $topic->delete();
-        return response()->json(['result' => 'del succesfully'], 204);
+        return response()->json(['result' => 'del successfuly'], 200);
     }
 }
