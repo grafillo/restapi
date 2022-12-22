@@ -12,3 +12,5 @@ http://restapi/public/api/v1/notebook?page=2 то выведет 2 страни�
 1.4. POST /api/v1/notebook/<id>/ - изменяет запись с айди
 1.5. DELETE /api/v1/notebook/<id>/ - удаляет запись с айди
 
+update
+

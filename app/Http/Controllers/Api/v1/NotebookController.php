@@ -70,6 +70,7 @@ class NotebookController extends Controller
             $updateTopic["email"] = $topic->email;
         }
 
+
         $topic->update($updateTopic);
         return $topic;
     }
