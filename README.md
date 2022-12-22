@@ -13,5 +13,5 @@ http://restapi/public/api/v1/notebook?page=2 то выведет 2 страни�
 1.5. DELETE /api/v1/notebook/<id>/ - удаляет запись с айди  
     
 
-update 1.1
+update 1.2
 
